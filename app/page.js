@@ -19,6 +19,7 @@ export default async function Home() {
       </div>
       <div className="slider">
         <div className="wrapper">
+          <img src='angle_left.svg'/>
           <div className="carousel">
           { result.map((a, i) => {
               return (
@@ -26,6 +27,7 @@ export default async function Home() {
               )}
           )}
           </div>
+          <img src='angle_right.svg'/>
         </div>
       </div>
     </div>

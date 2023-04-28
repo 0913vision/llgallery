@@ -52,6 +52,14 @@ a {
   max-width: 1200px;
 }
 
+.wrapper img {
+  height: 46px;
+  width: 46px;
+  text-align: center;
+  line-height: 46px;
+  background: #fff;
+}
+
 .wrapper .carousel{
   font-size: 0px;
   cursor: pointer;
