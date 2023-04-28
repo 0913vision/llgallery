@@ -50,14 +50,30 @@ a {
 
 .wrapper {
   max-width: 1200px;
+  position: relative
 }
 
-.wrapper img {
-  height: 46px;
-  width: 46px;
+.wrapper .arrow {
+  top: 50%;
+  padding: 10px;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
   text-align: center;
-  line-height: 46px;
+  line-height: 40px;
   background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 50%;
+  /* transform: translateY(-50%); */
+}
+
+.wrapper .arrow:first-child {
+  left: -23px;
+}
+
+.wrapper .arrow:last-child {
+  right: -23px;
 }
 
 .wrapper .carousel{
@@ -79,8 +95,20 @@ a {
 
 .slider {
   display: flex;
-  padding: 0 10px;
+  padding: 0 35px;
   align-items: center;
   justify-content: center;
   min-width: 100vh;
+}
+
+@media screen and (max-width: 900px) {
+  .carousel img {
+    width: calc(100%/2);
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .carousel img {
+    width: 100%;
+  }
 }

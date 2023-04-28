@@ -9,6 +9,10 @@ export default async function Home() {
     element._id = element._id.toString()
   });
 
+  const dragging = (e) => {
+    console.log(e.pageX);
+  }
+
   return (
     <div>
       <div className="searchBar">
@@ -19,7 +23,7 @@ export default async function Home() {
       </div>
       <div className="slider">
         <div className="wrapper">
-          <img src='angle_left.svg'/>
+          <img className='arrow' src='angle_left.svg'/>
           <div className="carousel">
           { result.map((a, i) => {
               return (
@@ -27,7 +31,7 @@ export default async function Home() {
               )}
           )}
           </div>
-          <img src='angle_right.svg'/>
+          <img className='arrow' src='angle_right.svg'/>
         </div>
       </div>
     </div>
