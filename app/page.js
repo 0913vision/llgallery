@@ -1,4 +1,5 @@
 import { connectDB } from "@/util/database";
+import Slider from "./Slider";
 
 export default async function Home() {
 
@@ -9,10 +10,6 @@ export default async function Home() {
     element._id = element._id.toString()
   });
 
-  const dragging = (e) => {
-    console.log(e.pageX);
-  }
-
   return (
     <div>
       <div className="searchBar">
@@ -21,25 +18,7 @@ export default async function Home() {
           <button>검색</button>
         </form>
       </div>
-      <div className="slider">
-        <div className="wrapper">
-          <img className='arrow' src='angle_left.svg'/>
-          <div className="carousel">
-          { result.map((a, i) => {
-              return (
-                  <ImageItem key={i} src={a.link} />
-              )}
-          )}
-          </div>
-          <img className='arrow' src='angle_right.svg'/>
-        </div>
-      </div>
+      <Slider result={result} />
     </div>
-  )
-}
-
-function ImageItem(props) {
-  return (
-    <img src={props.src} alt={props.name} />  
   )
 }
